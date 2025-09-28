@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/heroicons@2.0.18/24/outline/style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Левая часть с дроном -->
+    <div class="drone">
+        <img src="images/dron1.png" alt="drone"/>
+    </div>
+
+    <!-- Форма авторизации -->
+    <div class="auth-box">
+        <div class="auth-header">
+
+            <img src="images/logo.png" class="logo" alt="logo"/>
+            <h2>Авторизация</h2>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" class="input-field" required>
+            </div>
+
+            <div class="input-group password-group">
+                <label for="password">Пароль</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" class="input-field" required autocomplete="current-password" aria-describedby="toggle-password-help">
+                    <button type="button" class="toggle-password" data-target="password" aria-label="Показать пароль">
+                        <!-- Открытый глаз -->
+                        <img src="https://unpkg.com/heroicons@2.0.18/24/outline/eye.svg" class="icon-eye h-6 w-6" alt="Показать пароль">
+                        <!-- Зачёркнутый глаз -->
+                        <img src="https://unpkg.com/heroicons@2.0.18/24/outline/eye-slash.svg" class="icon-eye-slash hidden h-6 w-6" alt="Скрыть пароль">
+                    </button>
+                </div>
+            </div>
+
+            <div class="forgot">
+                <a href="#">Забыли пароль?</a>
+            </div>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+    </div>
+
+    <!-- Правая часть с оператором -->
+    <div class="operator">
+        <img src="images/men1.png" alt="Operator">
+    </div>
+
+    <div class="grow2">
+        <img src="images/fon2.png" alt="grow2"/>
+    </div>
+
+    <div class="grow1">
+        <img src="images/fon1.png" alt="grow1"/>
+    </div>
+
+</div>
+</body>
+</html>
