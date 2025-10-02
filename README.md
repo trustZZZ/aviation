@@ -63,4 +63,22 @@
 Однако эндпоинты реализованы на бэкенде, которые можно будет подключить к фронту посредствам обращения по API-запросам
 * http://localhost:8000/docs - отобразит все ендпоинты
 
+** geo/chang_data - позволяет по SID вносить изменения о полете в базе данных
+
+<img width="1644" height="884" alt="image" src="https://github.com/user-attachments/assets/d836e824-4dc2-4489-b8cf-2a2dcad3d595" />
+
+** geo/get_data_from_region - позволяет выгрузить все полеты по заданному региону
+
+<img width="1368" height="888" alt="image" src="https://github.com/user-attachments/assets/b999c102-9d25-48bd-a823-a562a12a353a" />
+
+** geo/get_flight - позволяет по SID найти данные о полете
+
+<img width="1328" height="872" alt="image" src="https://github.com/user-attachments/assets/8ea80a58-c8b8-4e70-ace9-7278c05497ae" />
+
+** geo/uploadfile - позволяет загрузить файл базы данных в формате excel для дальнейшего парсинга и добавления данных о полетах в БД
+
+<img width="1332" height="876" alt="image" src="https://github.com/user-attachments/assets/099362a8-d9a0-4f09-9ba0-3426a2b833a7" />
+
+** geo/insert_data - позволяет преобразовать данные в табличной форме в записи в БД
+
 
