@@ -1,0 +1,22 @@
+version: "2.39.2"
+services:
+  db:
+    image: postgres:17.6
+    container_name: monitoring_db
+    env_file:
+      - .env-non-dev
+    ports:
+      - 5432:5432
+
+  monitoring:
+    image: pass
+    build:
+      context: .
+    container_name: monitoring_app
+    env_file:
+      - .env-non-dev
+
+    depends_on:
+      - db
+    
+    command:  &&
