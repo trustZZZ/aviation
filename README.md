@@ -13,12 +13,17 @@
   * docker run -p 127.0.0.1:8080:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.3.4 start-dev
 Эта команда запустит сервис keycloak для дальнейшей работы
 Для настройки окружения необходио создать администратора, установить пароль и добавить разрешения для администратора. После этого можно будет удалить временную запись.
+
+<img width="1480" height="704" alt="image" src="https://github.com/user-attachments/assets/75476092-2ebf-4960-b3df-83352c1eff48" />
+
 Настроить realms:
   * Realm name - FastAPI Connection
 Создать client:
   * id - fastapi-client
-  * установить поля (образец заполнения в keycloak_client_settings.mhtml)
-Скопировать в файл .env проекта из поля credentials ClientSecret (образец client_сredentials.mhtml)
+  * установить поля
+Скопировать в файл .env проекта из поля credentials ClientSecret
+
+<img width="1536" height="800" alt="image" src="https://github.com/user-attachments/assets/bc33e385-6cf5-46ec-a141-4dcc376038bb" />
 
 
 Также необходимо установить Node.js для работы фронтэнда (https://nodejs.org/en/download/) через докер
@@ -27,5 +32,3 @@
   * npm run dev - запуститься локальный сервер
 
 Для работы 
- 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/756b4fa5-460f-4787-b258-c2b24cdb4cf8" />
