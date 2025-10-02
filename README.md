@@ -28,3 +28,4 @@
 
 Для работы 
  
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/756b4fa5-460f-4787-b258-c2b24cdb4cf8" />
