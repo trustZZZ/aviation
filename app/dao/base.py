@@ -1,18 +1,18 @@
-from sqlalchemy import select, insert, update
-from sqlalchemy.orm import selectinload
-from pydantic import BaseModel
-from app.database import async_session_maker
-from app.users.schemas import SUserID
-from sqlalchemy.ext.asyncio import AsyncSession
-from typing import Generic
-from sqlalchemy.exc import SQLAlchemyError
-from loguru import logger
 from typing import Generic, List, Type, TypeVar
-from sqlalchemy import update as sqlalchemy_update
+
+from loguru import logger
+from pydantic import BaseModel
 from sqlalchemy import delete as sqlalchemy_delete
 from sqlalchemy import func
+from sqlalchemy import update as sqlalchemy_update
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
 
-T = TypeVar('T')
+from app.database import Base
+
+T = TypeVar("T", bound=Base)
+
 
 class BaseDAO(Generic[T]):
     model: Type[T] = None  # type: ignore
@@ -173,4 +173,3 @@ class BaseDAO(Generic[T]):
         except SQLAlchemyError as e:
             logger.error(f"Ошибка при массовом обновлении: {e}")
             raise
-        

@@ -15,7 +15,7 @@ from app.services.keycloak_client import KeycloakClient
 
 from app.api.router import router as api_router
 from app.pages.router import router as pages_router
-
+from app.flights.router import router as flight_router
 
 
 @asynccontextmanager
@@ -27,8 +27,10 @@ async def lifespan(app: FastAPI):
     #Подключаем роутеры и статику
     app.include_router(pages_router)
     app.include_router(api_router)
-    app.mount("/static", StaticFiles(directory="app/static"), name="static")
-    app.mount("/images", StaticFiles(directory="app/images"), name="images")
+    app.include_router(flight_router)
+    
+    app.mount("/ui/src", StaticFiles(directory="app/ui/src"), name="src")
+    app.mount("/ui/node_modules", StaticFiles(directory="app/ui/node_modules"), name="node_modules")
 
     yield
 
@@ -58,5 +60,5 @@ app.add_middleware(
 )
 
 if __name__ == "__main__":
-    uvicorn.run(app="app.main:app", reload=True, port=3000, host="localhost")
+    uvicorn.run(app="app.main:app", reload=True, port=8000, host="localhost")
 

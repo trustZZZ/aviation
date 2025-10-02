@@ -6,10 +6,10 @@ class SUserId(BaseModel):
 
     
 class AddUser(BaseModel):
-    id: str
-    email: str
-    email_verified: bool
-    name: str
-    preferred_username: str
-    given_name: str
-    family_name: str
+    id: str | None = None
+    email: str | None = None
+    email_verified: bool | None = None
+    name: str | None = None
+    preferred_username: str | None = None
+    given_name: str | None = None
+    family_name: str | None = None
